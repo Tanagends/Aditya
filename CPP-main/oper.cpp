@@ -7,7 +7,7 @@ class complex{
         real=0;
         img=0;
     }
-    complex(r,i)
+    complex(int r,int i)
     {
         real=r;
         img=i;
@@ -21,6 +21,7 @@ class complex{
         complex temp;
         temp.real=real+deep.real;
         temp.img=img+deep.img;
+        return temp;
     }
 };
 int main()

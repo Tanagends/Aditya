@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+class B;
 class A
 {
 	private: int a;
@@ -9,7 +9,7 @@ class A
 		cout<<"enter value of a"<<endl;
 		cin>>a;
 	}
-	friend class C;
+	friend void product(A,B);
 };
 
 class B
@@ -20,25 +20,22 @@ class B
 		cout<<"enter b value"<<endl;
 		cin>>b;
 	}
-	friend class C;
+friend void product(A,B);	
 };
 
-class C
+void product(A obj1,B obj2)
 {
-	public:
-			A a1;
-	            B b1;
-	 void print()
-	{
-		a1.geta();
-		b1.getb();
-		cout<<"Product is : "<<a1.a*b1.b<<endl;
-	}
+
+		cout<<"Product is : "<<obj1.a*obj2.b<<endl;
+	
 };
 
 int main()
 {
-	C c1;
-	c1.print();
+	A a1;
+	B b1;
+	a1.geta();
+	b1.getb();
+    product(a1,b1);
 	return 0;
 }
