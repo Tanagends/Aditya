@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>User defined Objects- Car</h2>
+    <script>
+    // Define a class named 'Car'
+class Car {
+  //  Constructor function 
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  // Accessor: Getter for Car
+  getCarDetails() {
+    
+          return `Model: ${this.model} <br> Make: ${this.make} <br> Year: ${this.year}`;
+  }
+
+  // Accessor: Setter for  Car
+setCarDetails(make, model, year)
+{
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+    // Method to display Car details
+  startEngine() {
+              return `Model: ${this.model} <br> Make: ${this.make} <br> Year: ${this.year}<br>`;
+
+  }
+}
+
+// Create object (instances) from the Car class
+const myCar = new Car("Toyota", "Fourtuner", 2025);
+
+// Access properties and call methods on the objects
+document.write("<strong>Car Details:</strong><br>");
+document.write(myCar.startEngine()+"<br>");   
+// Update car details using setter
+myCar.setCarDetails("Ford", "Masteng", 2025);
+    // Display using getter method
+    document.write("<strong>Reassign Car details using Setter</strong><br>");
+document.write("<strong>Access New Car Details using getter</strong><br>");
+document.write(myCar.getCarDetails()+"<br>"); 
+</script>
+</body>
+</html>

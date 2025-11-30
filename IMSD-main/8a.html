@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> My program </title>
+    </head>
+
+    <body>
+        
+        <script>
+            let nums = []
+            let i=0;
+            let big =0;
+
+            for (i=0; i < 3; i++) {
+                nums.push(parseInt(window.prompt(`Enter int ${i+1}: `))); 
+                if (i == 0) {
+                    big = nums[0];
+                }
+                else {
+                    big = nums[i] > big ? nums[i] : big;
+                }
+            }
+            if (nums[0] == nums[1] && nums[1] == nums[2]) {
+                alert("Equal numbers");
+            }
+            else {
+                alert(`Biggest number is ${big}`);
+            }
+        </script>
+    </body>
+</html>

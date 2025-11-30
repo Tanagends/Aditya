@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> My program </title>
+    </head>
+
+    <body>
+        
+        <script>
+            let food = ["Juice", "Berry", "Biryani"];
+            document.write(`Using for-in `);
+            for (const a in food)
+            {
+                document.write(`${a} `);
+            }
+            document.write("<br>");
+            document.write(`Using for each `);
+            i = 0;
+
+            food.forEach((item) => {
+                document.write(`${item} `);
+            })
+            document.write("<br>");
+
+            document.write(`Using for - of loop `);
+
+            for (const b of food) {
+                document.write(`${b} `)
+            }
+        </script>
+    </body>
+</html>
